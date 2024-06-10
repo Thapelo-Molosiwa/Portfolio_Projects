@@ -1,16 +1,17 @@
 import React from 'react';
-import "../header/header.css";
+import { Link } from 'react-router-dom';
+import "./header.css"; // Make sure this path is correct
+import logoImage from '../images/Gemini_Generated_Image_1gm7v51gm7v51gm7-removebg-preview.png'; // Adjust the path if necessary
 
 const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <a href="#home">
+        <Link to="/">
           <div className='logolog'>
-          <img src='../components\images\Gemini_Generated_Image_1gm7v51gm7v51gm7-removebg-preview.png' alt="MyLogo" />
-        
+            <img src={logoImage} alt="MyLogo" />
           </div>
-       </a>
+        </Link>
       </div>
       <div className="search-bar">
         <input type="text" placeholder="Search..." />
@@ -18,10 +19,8 @@ const Header = () => {
       </div>
       <nav className="nav">
         <ul className="nav-links">
-        <li><a href="#Favorites">Favorites</a></li>
-          <li><a href="#about">About</a></li>
-          
-          
+          <li><Link to="/favorites">Favorites</Link></li>
+          <li><Link to="/about">About</Link></li>
         </ul>
       </nav>
     </header>
