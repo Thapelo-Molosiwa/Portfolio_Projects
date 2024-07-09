@@ -4,13 +4,20 @@ import '../buttons/Favs.css';
 const FavoriteButton = () => {
   const [isFavorite, setIsFavorite] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.stopPropagation(); // Prevent click event from bubbling up
     setIsFavorite(prev => !prev);
   };
 
   return (
     <div className="heart-container" title="Like" onClick={handleClick}>
-      <input type="checkbox" className="checkbox" id="favoriteCheckbox" checked={isFavorite} readOnly />
+      <input 
+        type="checkbox" 
+        className="checkbox" 
+        id="favoriteCheckbox" 
+        checked={isFavorite} 
+        readOnly 
+      />
       <div className="svg-container">
         {isFavorite ? (
           <svg viewBox="0 0 24 24" className="svg-filled" xmlns="http://www.w3.org/2000/svg">
