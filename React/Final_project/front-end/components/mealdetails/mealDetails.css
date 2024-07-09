@@ -80,14 +80,14 @@
 }
 
 .ingredients ul {
-    text-decoration: none;
-    list-style-type: disc; /* Use disc bullets */
+    
+    list-style-type: none;
     padding-left: 20px; /* Indent list */
     line-height: 1.6;
 }
 
 .ingredients li {
-    text-decoration: none;
+    
     margin-bottom: 5px;
 }
 
