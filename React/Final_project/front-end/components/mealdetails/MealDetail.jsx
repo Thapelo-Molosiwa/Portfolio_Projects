@@ -29,7 +29,8 @@ const MealDetail = () => {
             fetchMeal();
         }
     }, [id]);
-
+     
+    // loading 
     if (loading) {
         return (
             <div className="loader-container">
