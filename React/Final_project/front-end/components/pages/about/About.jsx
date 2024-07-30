@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import '../about/about.css';
 
 const About = () => {
+  const navigate = useNavigate();
   const [visibleSection, setVisibleSection] = useState('about-me');
 
   const handleButtonClick = (id) => {
@@ -17,8 +20,17 @@ const About = () => {
     }
   };
 
+  const handleBackClick = () => {
+    navigate('/');
+  };
+
   return (
     <div className="about">
+      <div className="top-bar">
+        <button className="back-button" onClick={handleBackClick}>
+          &#8592; Home
+        </button>
+      </div>
       <div className="nav-buttons">
         <button onClick={() => handleButtonClick('about-me')}>About Me</button>
         <button onClick={() => handleButtonClick('education')}>Education</button>
@@ -62,6 +74,6 @@ const About = () => {
       )}
     </div>
   );
-}
+};
 
 export default About;
