@@ -1,10 +1,10 @@
-// src/MealDetail.js
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import "../mealdetails/mealDetails.css"
+import { useParams, useNavigate } from 'react-router-dom';
+import "../mealdetails/mealDetails.css";
 
-const MealDetail = () => {
+export default function MealDetail  () {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [meal, setMeal] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -29,7 +29,7 @@ const MealDetail = () => {
             fetchMeal();
         }
     }, [id]);
-     
+
     // loading 
     if (loading) {
         return (
@@ -49,6 +49,11 @@ const MealDetail = () => {
 
     return (
         <div className="meal-detail">
+            <button className="back-button" onClick={() => navigate('/')}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+            </button>
             <img src={meal.strMealThumb} alt={meal.strMeal} className="meal-image"/>
             <h2>{meal.strMeal}</h2>
             <p><strong>Category:</strong> {meal.strCategory}</p>
@@ -71,4 +76,4 @@ const MealDetail = () => {
     );
 };
 
-export default MealDetail;
+
