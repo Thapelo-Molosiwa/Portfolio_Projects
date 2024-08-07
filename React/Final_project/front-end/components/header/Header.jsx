@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./header.css"; // Make sure this path is correct
-import logoImage from '../images/Gemini_Generated_Image_1gm7v51gm7v51gm7-removebg-preview.png'; // Adjust the path if necessary
+import "./header.css"; 
+import logoImage from '../images/Gemini_Generated_Image_1gm7v51gm7v51gm7-removebg-preview.png'; 
+import SearchForm from '../buttons/SearchForm';
 
 const Header = () => {
   return (
@@ -13,10 +14,12 @@ const Header = () => {
           </div>
         </Link>
       </div>
-      <div className="search-bar">
-        <input type="text" placeholder="Search..." />
-        <button type="submit">Go</button>
+
+      <div className='search-bar'>
+      <SearchForm/>
       </div>
+      
+      
       <nav className="nav">
         <ul className="nav-links">
           <li><Link to="/favorites">Favorites</Link></li>
