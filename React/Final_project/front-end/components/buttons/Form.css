@@ -5,6 +5,7 @@
   background: none;
   color: #8b8ba7;
 }
+
 /* styling of whole input container */
 .form {
   --timing: 0.3s;
@@ -30,6 +31,7 @@
   transform: translateX(-50%);
   z-index: 1000;
 }
+
 /* styling of Input */
 .input {
   font-size: 0.9rem;
@@ -40,6 +42,7 @@
   padding-block: 0.7em;
   border: none;
 }
+
 /* styling of animated border */
 .form:before {
   content: "";
@@ -54,6 +57,7 @@
   border-radius: 1px;
   transition: transform var(--timing) ease;
 }
+
 /* Hover on Input */
 .form:focus-within {
   border-radius: var(--after-border-radius);
@@ -62,10 +66,12 @@
 input:focus {
   outline: none;
 }
+
 /* here is code of animated border */
 .form:focus-within:before {
   transform: scale(1);
 }
+
 /* styling of close button */
 /* == you can click the close button to remove text == */
 .reset {
@@ -74,11 +80,13 @@ input:focus {
   opacity: 0;
   visibility: hidden;
 }
+
 /* close button shown when typing */
 input:not(:placeholder-shown) ~ .reset {
   opacity: 1;
   visibility: visible;
 }
+
 /* sizing svg icons */
 .form svg {
   width: 17px;
@@ -99,6 +107,7 @@ input:not(:placeholder-shown) ~ .reset {
   padding: 0;
 }
 
+/* Updated styling of suggestions with scrollable feature */
 .suggestions {
   list-style-type: none;
   padding: 0;
@@ -109,8 +118,10 @@ input:not(:placeholder-shown) ~ .reset {
   max-width: var(--width-of-input);
   position: absolute;
   top: var(--height-of-input);
-  width: 25%;
+  width: 30%;
   z-index: 1000;
+  max-height: 200px; 
+  overflow-y: auto;  /* Enable vertical scrolling */
 }
 
 .suggestions li {

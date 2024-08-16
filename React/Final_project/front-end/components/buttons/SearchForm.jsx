@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Form.css';
 
-export default function SearchForm ()  {
+export default function SearchForm() {
   const [searchQuery, setSearchQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [error, setError] = useState(null);
+  const [noResults, setNoResults] = useState(false);
 
   const fetchSuggestions = async (query) => {
     try {
@@ -13,8 +14,10 @@ export default function SearchForm ()  {
       const data = await response.json();
       if (data.meals) {
         setSuggestions(data.meals);
+        setNoResults(false);
       } else {
         setSuggestions([]);
+        setNoResults(true);
       }
     } catch (err) {
       setError('Error fetching suggestions');
@@ -25,10 +28,11 @@ export default function SearchForm ()  {
   const handleInputChange = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
-    if (query.length > 2) {
+    if (query.length > 0) {
       fetchSuggestions(query);
     } else {
       setSuggestions([]);
+      setNoResults(false);
     }
   };
 
@@ -36,6 +40,7 @@ export default function SearchForm ()  {
     setSearchQuery('');
     setSuggestions([]);
     setError(null);
+    setNoResults(false);
   };
 
   return (
@@ -63,6 +68,8 @@ export default function SearchForm ()  {
 
       {error && <p>{error}</p>}
 
+      {noResults && <p>No search found</p>}
+
       {suggestions.length > 0 && (
         <ul className="suggestions">
           {suggestions.map((meal) => (
@@ -74,6 +81,4 @@ export default function SearchForm ()  {
       )}
     </div>
   );
-};
-
-
+}
