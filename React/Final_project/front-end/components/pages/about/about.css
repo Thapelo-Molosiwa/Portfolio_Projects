@@ -1,8 +1,7 @@
-/* about.css */
-
 .about {
-  padding: 20px;
-  margin-top: 100px;
+  background-color: whitesmoke;
+
+  overflow: hidden;
 }
 
 .nav-buttons {
@@ -27,13 +26,6 @@
   background-color: #0056b3;
 }
 
-.top-bar {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-}
-
 .back-button {
   background: none;
   border: none;
@@ -48,4 +40,72 @@
 
 section {
   padding: 20px;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Flexbox layout for #about-me */
+#about-me {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Styles for text section */
+.set {
+  text-align: center;
+  margin: 0; /* Remove default margin */
+  position: relative;
+  top: -50px; /* Move text section slightly up */
+}
+
+/* Styles for text within .set */
+.set h1 {
+  position: inherit;
+  left: -40px;
+  top: 10px;
+  font-size: 2.5rem; 
+  font-weight: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0; /* Remove default margin */
+}
+
+.elevator-pitch {
+  line-height: 1.3; /* Adjust line height */
+  max-width: 650px; /* Limit the width for text to wrap */
+  position: relative;
+  top: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+
+  font-size: large;
+}
+
+/* Ensure the subheading aligns correctly */
+.set h2 {
+  font-weight: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+  left: -185px;
+  top: 15px;
+}
+
+/* Styles for image section */
+.image-section {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -60px; /* Move image section up */
+}
+
+.image-section img {
+  max-width: 320px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 50%; 
+  position: inherit;
+  top: 50px;
+  right: 50px;
+ 
 }
