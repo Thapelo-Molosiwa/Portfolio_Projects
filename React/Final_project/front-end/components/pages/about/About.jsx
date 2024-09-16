@@ -58,13 +58,16 @@ const About = () => {
             <h1>Hi I'm Thapelo Molosiwa,</h1>
             <h2>Front-End Developer</h2>
             <p className="elevator-pitch">
-              Hi, I’m Thapelo, a junior software developer. I’m skilled in React
+              Hi, I’m Thapelo, a junior software developer. I’m skilled in JavaScript, HTML, CSS, Next.JS, React
               and Angular, and I love turning ideas into practical,
               user-friendly applications. I’m always eager to learn and take on
               new challenges. My goal is to build solutions that are not only
               functional but also enjoyable to use. I’m excited to bring my
               passion and skills to new projects and help create great software.
             </p>
+            
+           <button className="dnldb">Resume</button>
+          
           </div>
 
           <div className="image-section">
