@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "../about/about.css";
+import DownloadButton from "../../buttons/DownloadButton";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const About = () => {
   const navigate = useNavigate();
@@ -56,18 +58,35 @@ const About = () => {
         <section id="about-me">
           <div className="set">
             <h1>Hi I'm Thapelo Molosiwa,</h1>
-            <h2>Front-End Developer</h2>
+            <h2>Software Developer</h2>
             <p className="elevator-pitch">
-              Hi, I’m Thapelo, a junior software developer. I’m skilled in JavaScript, HTML, CSS, Next.JS, React
-              and Angular, and I love turning ideas into practical,
-              user-friendly applications. I’m always eager to learn and take on
-              new challenges. My goal is to build solutions that are not only
-              functional but also enjoyable to use. I’m excited to bring my
-              passion and skills to new projects and help create great software.
+              Hi, I’m Thapelo, a junior software developer. I’m skilled in
+              JavaScript, HTML, CSS, Next.JS, React and Angular, and I love
+              turning ideas into practical, user-friendly applications. I’m
+              always eager to learn and take on new challenges. My goal is to
+              build solutions that are not only functional but also enjoyable to
+              use. I’m excited to bring my passion and skills to new projects
+              and help create great software.
             </p>
-            
-           <button className="dnldb">Resume</button>
-          
+
+            <DownloadButton />
+
+            <div className="social-icons">
+              <a
+                href="https://github.com/Thapelo-Molosiwa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub size={30} />
+              </a>
+              <a
+                href="www.linkedin.com/in/thapelo-molosiwa-476b57271"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size={30} />
+              </a>
+            </div>
           </div>
 
           <div className="image-section">

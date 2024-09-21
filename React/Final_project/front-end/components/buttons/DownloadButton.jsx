@@ -4,7 +4,7 @@ import './DownloadButton.css';
 const DownloadButton = () => {
   return (
     <a 
-      href="/path-to-your-resume.pdf" 
+      href="../components\images\IT.Molosiwa's Resume.docx (2).pdf" 
       download="Thapelo_Molosiwa_Resume.pdf"
       className="download-resume" 
     >
@@ -24,7 +24,7 @@ const DownloadButton = () => {
             </svg>
           </div>
           <div className="text-container">
-            <div className="text">Download</div>
+            <div className="text">Resume</div>
           </div>
         </div>
       </button>

@@ -1,5 +1,5 @@
 .download-btn {
-    height: 45px;
+    height: 40px;
     width: 95px;
     cursor: pointer;
     background: white;
@@ -16,7 +16,7 @@
   
   .svg-container,
   .text-container {
-    height: 45px;
+    height: 43px;
     width: 100%;
     display: flex;
     justify-content: center;
