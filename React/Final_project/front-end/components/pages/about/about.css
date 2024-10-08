@@ -136,11 +136,11 @@ section {
 }
 
 .image-section img {
-  max-width: 300px; 
+  max-width: 280px; 
   height: auto;
   border-radius: 50%; 
   position: inherit;
-  top: 50px;
+  top: 20px;
   right: 50px;
  
 }
